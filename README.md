@@ -18,7 +18,7 @@ Unlike other "fancy text" generators, this is built directly into your right-cli
 
 The easiest way to install the styler is to use the pre-packaged release:
 
-1. **Download the Extension**: Go to the [Releases](https://github.com/YOUR-USERNAME/linkedin-styler/releases) page and download the `linkedin-styler-v1.0.zip` file.
+1. **Download the Extension**: Go to the [Releases](https://github.com/DerailleurAgile/linkedin-styler/releases) page and download the `linkedin-styler-v1.0.zip` file.
 2. **Extract**: Unzip the file into a folder on your computer.
 3. **Open Extensions**: In Chrome, go to `chrome://extensions/`.
 4. **Enable Developer Mode**: Toggle the **Developer mode** switch in the top right corner.
