@@ -1,4 +1,4 @@
-# ✍️ LinkedIn Unicode Styler
+# ✍️ CRC's LinkedIn Text-Style Fixer
 
 **Stop posting boring plain-text updates.** This Chrome Extension allows you to bypass LinkedIn's lack of native formatting by using Mathematical Alphanumeric Unicode symbols. 
 
