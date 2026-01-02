@@ -26,11 +26,29 @@ The easiest way to install the styler is to use the pre-packaged release:
 6. **Start Styling**: Refresh your LinkedIn tab, highlight some text, and right-click!
 
 
+## 📖 How to Use
+
+Once installed, using the styler is as easy as a right-click.
+
+1. **Start a Post**: Open the LinkedIn "Start a post" box or start a comment.
+2. **Type & Highlight**: Type your text as usual, then highlight the specific word or sentence you want to style.
+3. **Right-Click**: Open the context menu and find the **✍️ CRC's LinkedIn Text-Style Fixer** menu item.
+4. **Select a Style**: Choose from Bold, Italic, or Bold-Italic. The text will transform instantly!
+5. **To Undo**: Highlight any styled text and select the Fight Club soap bar **🧼 Clear Styles (Plain)** to return it to standard LinkedIn text.
+
 
 ## 🧠 The Technical Challenge
 LinkedIn's editor often breaks when you manually inject HTML. This extension uses `document.execCommand('insertText')` and **Unicode-aware mapping** (handling 32-bit surrogate pairs) to ensure your text stays perfectly formatted without breaking the editor's internal state. 
 
 It specifically solves the "inverted casing" and "Planck's Constant 'h'" bugs found in many standard Unicode generators by using hardcoded mapping for non-contiguous character blocks.
+
+
+### ⚠️ A Note on Unicode
+
+This tool uses Mathematical Alphanumeric Symbols. While it looks like "font styling," it is actually changing the characters themselves.
+
+* **Search**: Styled text may not show up in standard LinkedIn keyword searches.
+* **Accessibility**: Use bolding sparingly for key terms so that users with screen readers can still follow the core of your message.
 
 ---
 
