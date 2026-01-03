@@ -1,3 +1,26 @@
+const STYLE_REGISTRY = {
+  "transform-bold": {
+    visual: "bold",
+    semantic: "strong"
+  },
+  "transform-bold-italic": {
+    visual: "bold-italic",
+    semantic: "strong-em"
+  },
+  "transform-italic": {
+    visual: "italic-serif",
+    semantic: "em"
+  },
+  "transform-italic-sans": {
+    visual: "italic-sans",
+    semantic: "em"
+  },
+  "transform-clear": {
+    visual: "clear",
+    semantic: "clear"
+  }
+};
+
 chrome.runtime.onInstalled.addListener(() => {
   // Parent Menu with a distinctive icon
   chrome.contextMenus.create({
@@ -46,8 +69,17 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  chrome.tabs.sendMessage(tab.id, { 
-    action: "transform", 
-    style: info.menuItemId 
+  // chrome.tabs.sendMessage(tab.id, { 
+  //   action: "transform", 
+  //   style: info.menuItemId 
+  // });
+  const styleConfig = STYLE_REGISTRY[info.menuItemId];
+  if (!styleConfig) return;
+
+  chrome.tabs.sendMessage(tab.id, {
+    action: "transform",
+    style: info.menuItemId,     // Unicode visual transform
+    semanticRole: styleConfig.semantic, // e.g., 'strong', 'em'
+    source: "context-menu"
   });
 });
