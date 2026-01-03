@@ -49,7 +49,7 @@ It specifically solves the "inverted casing" and "Planck's Constant 'h'" bugs fo
 This tool uses Mathematical Alphanumeric Symbols. While it looks like "font styling," it is actually changing the characters themselves.
 
 * **Search**: Styled text may not show up in standard LinkedIn keyword searches.
-* **Accessibility**: Use bolding sparingly for key terms so that users with screen readers can still follow the core of your message.
+* **Accessibility**: Use bolding sparingly for key terms so that users with screen readers can still follow the core of your message. I tried to embed hidden tags alongside the formatted text that readers could access, but LinkedIn's editor (Quill) aggressively strips them out. It should be noted that AI-enabled readers and those that can process text contextually (like Google's TalkBack) can read unicode as whole words and not just individual characters.
 
 ---
 
